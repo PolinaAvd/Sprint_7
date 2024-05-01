@@ -21,7 +21,7 @@ class CreateCourer():
             "firstName": saved_data[2]
         }
         response_two = requests.post(data.CREATE_COURER_URL, data=payload)
-        return response_two.status_code
+        return response_two
 
 
     def creation_of_the_courer_no_data(self, payload):
@@ -54,7 +54,7 @@ class CreateCourer():
             "firstName": first_name
         }
         response = requests.post(data.CREATE_COURER_URL, data=payload)
-        return response.status_code
+        return response
 
 
     def creation_of_the_courer_no_password(self):
@@ -67,7 +67,7 @@ class CreateCourer():
             "firstName": first_name
         }
         response = requests.post(data.CREATE_COURER_URL, data=payload)
-        return response.status_code
+        return response
 
 
     def creation_of_the_courer_no_firstname(self):
@@ -80,7 +80,7 @@ class CreateCourer():
             "firstName": ''
         }
         response = requests.post(data.CREATE_COURER_URL, data=payload)
-        return response.status_code
+        return response
 
 
     def creation_of_doubled_login_courer(self):
@@ -94,4 +94,4 @@ class CreateCourer():
             "firstName": firstName
         }
         response_two = requests.post(data.CREATE_COURER_URL, data=payload)
-        return response_two.status_code
+        return response_two
