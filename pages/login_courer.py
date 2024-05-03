@@ -1,14 +1,15 @@
+import allure
+
 from pages.main import Main
 import requests
 import data
 
 
-class CourerLogIn():
+class CourerLogIn(Main):
 
-
+    @allure.step('Авторизация курьера после создания')
     def courer_authorization_after_creation(self):
-        response = Main()
-        saved_data = response.register_new_courier_and_return_login_password()
+        saved_data = self.register_new_courier_and_return_login_password()
         payload = {
             "login": saved_data[0],
             "password": saved_data[1]

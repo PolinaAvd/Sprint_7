@@ -7,6 +7,8 @@ GET_ORDER_URL = 'https://qa-scooter.praktikum-services.ru/api/v1/orders'
 
 ERROR_BY_LOGIN_PASS_NOT_EXIST = '{"code":404,"message":"Учетная запись не найдена"}'
 ERROR_BY_LOGIN_PASS_NOT_ENTERED = '{"code":400,"message":"Недостаточно данных для входа"}'
+ERROR_BY_LOGIN_LOGIN_ALREADY_EXISTS = '{"code":409,"message":"Этот логин уже используется. Попробуйте другой."}'
+ERROR_BY_CREATION_OF_ACCOUNT = '{"code":400,"message":"Недостаточно данных для создания учетной записи"}'
 
 login_pass_correct = ['Courercreated454', '6666556565656']
 login_no_login = ['', '6666556565656']

@@ -17,7 +17,7 @@ class TestCourerLogIn():
     def test_authorization_no_login_or_pass_fail(self, mock_payload, value):
             mock_payload.return_value = value
             response = CourerLogIn().courer_authorization_after_creation()
-            assert response.status_code == 400 and response.text == '{"code":400,"message":"Недостаточно данных для входа"}'
+            assert response.status_code == 400 and response.text == data.ERROR_BY_LOGIN_PASS_NOT_ENTERED
 
     @allure.title('Система вернёт ошибку, если неправильно указать логин или пароль')
     @patch('pages.main.Main.register_new_courier_and_return_login_password')
